@@ -19,8 +19,9 @@ console.log(calculateLength(v));
   const v의 타입을 NamedVector로 설정, 
   calculateLength의 매개변수의 타입은 Vector2D로 설정하였다. 
   calculateLength함수에는 namedVector의 타입을 가진 v를 인수로 넣었는데,
+
+  NamedVector와 Vector2D의 타입 관계를 정의하지도 않았는데 
   함수의 실행에서 Error가 발생하지 않았다. 
-  NamedVector와 Vector2D의 관계를 정의하지도 않았는데 말이다.
 
   section03, chapter01
   NamedVector의 type과 Vector2의 type이 호환되기 때문에 
