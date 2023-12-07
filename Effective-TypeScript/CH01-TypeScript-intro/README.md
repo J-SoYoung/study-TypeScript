@@ -1,6 +1,4 @@
-# Effective TypeScript
-
-## CHAPTER01\_타입스크립트 알아보기
+# Effective-TS-CHAPTER01-타입스크립트 알아보기
 
 ### 아이템01 TS와 JS관계 이해하기
 
