@@ -9,8 +9,8 @@
 **section01**
 [:memo: Section01][Section01]
 
-- [:memo: section02][section02] : ㅇㅇㅇㅇㅇㅇㅇㅇㅇ
-- [:memo: section03][section03] : ㅇㅋㅋㅋㅋㅋㅋㅋㅋㅋ
+- [:memo: Section02][Section02] : ㅇㅇㅇㅇㅇㅇㅇㅇㅇ
+- [:memo: Section03][Section03] : ㅇㅋㅋㅋㅋㅋㅋㅋㅋㅋ
 
   This is the code sample repo for _Effective TypeScript: 62 Specific Ways to Improve Your TypeScript_. The book is available through:
   This is the code sample repo for _Effective TypeScript: 62 Specific Ways to Improve Your TypeScript_. The book is available through:
@@ -44,6 +44,6 @@ This is the code sample repo for _Effective TypeScript: 62 Specific Ways to Impr
 
 <!-- 한입 TypeScript -->
 
-[Section01] : /onebite-TypeScript/section01
-[Section02] : /onebite-TypeScript/section02
-[Section03] : /onebite-TypeScript/section03
+[Section01] : /study-typescript/onebite-TypeScript/section01
+[Section02] : /study-typescript/onebite-TypeScript/section02
+[Section03] : /study-typescript/onebite-TypeScript/section03
