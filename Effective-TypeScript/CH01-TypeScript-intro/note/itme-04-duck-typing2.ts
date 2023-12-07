@@ -17,7 +17,7 @@ interface Vector3D {
 
 function normalize(v: Vector3D) {
   const length = calculateLength(v);
-  console.log("length-", length);
+  console.log("length-", length );
   return {
     x: v.x / length,
     y: v.y / length,

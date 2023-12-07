@@ -13,17 +13,19 @@
 
 // 오버로드 시그니처 : 함수 타입을 버전별로 작성하는 것
 function func(a: number): void;
+function func(a: number, b: number, ): void;
 function func(a: number, b: number, c: number): void;
 
 /* 실제 구현부 Example (1)
-  function func () {}
-    오버로드 시그니처를 작성하면 구현부의 함수를 보고 타입을 결정하지 않는다. 
-    오버로드 시그니처에 있는 타입을 따라간다.
-  func()
-  func(1)
-  func(1,2)
-  func(1,2,3)
+오버로드 시그니처를 작성하면 구현부의 함수를 보고 타입을 결정하지 않는다. 
+오버로드 시그니처에 있는 타입을 따라간다.
+function func () {}
 */
+  // func()
+  // func(1)
+  // func(1,2)
+  // func(1,2,3)
+
 
 /* 실제 구현부 Example (2)
   구현 시그니처의 매개변수는 모든 오버로드 시그니처와 호환되도록 구현해야 한다.
