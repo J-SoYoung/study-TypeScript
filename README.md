@@ -28,8 +28,6 @@ This is the code sample repo for _Effective TypeScript: 62 Specific Ways to Impr
 
 <img src="https://github.com/thdud2262/study-typescript/assets/85012454/531b6998-533b-45b2-a52a-50881c6b4ed8" width="280" title="Cover Image" align="left">
 
-his is the code sample repo for _Effective TypeScript: 62 Specific Ways to Improve Your TypeScript_. The book is available through:This is the code sample repo for _Effective TypeScript: 62 Specific Ways to Improve Your TypeScript_. The book is available through:This is the code sample repo for _Effective TypeScript: 62 Specific Ways to Improve Your TypeScript_. The book is available through:This is the code sample repo for _Effective TypeScript: 62 Specific Ways to Improve Your TypeScript_. The book is available through:This is the code sample repo for _Effective TypeScript: 62 Specific Ways to Improve Your TypeScript_. The book is available through:This is the code sample repo for _Effective TypeScript: 62 Specific Ways to Improve Your TypeScript_. The book is available through:This is the code sample repo for _Effective TypeScript: 62 Specific Ways to Improve Your TypeScript_. The book is available through:
-
 - [:memo: chapter01][chapter01] : 타입스크립트 알아보기
 - [:memo: chapter01][chapter02] : 타입스크립트 타입 시스템
 - [:memo: chapter01][chapter03] : 타입 추론
