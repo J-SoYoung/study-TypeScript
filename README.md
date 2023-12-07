@@ -1,5 +1,5 @@
 # Typescript Study Note
-[section01]: /study-typescript/onebite-TypeScript/section01
+
 [section02]: /study-typescript/onebite-TypeScript/section02
 [section03]: /study-typescript/onebite-TypeScript/section03
 [section04]: /study-typescript/onebite-TypeScript/section04
