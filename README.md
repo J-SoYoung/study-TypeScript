@@ -1,15 +1,5 @@
 # Typescript Study Note
 
-[section02]: /onebite-TypeScript/section02
-[section03]: /study-typescript/onebite-TypeScript/section03
-[section04]: /study-typescript/onebite-TypeScript/section04
-[section05]: /study-typescript/onebite-TypeScript/section05
-[section06]: /study-typescript/onebite-TypeScript/section06
-[section07]: /study-typescript/onebite-TypeScript/section07
-[section08]: /study-typescript/onebite-TypeScript/section08
-[section09]: /study-typescript/onebite-TypeScript/section09
-[section10]: /study-typescript/onebite-TypeScript/section10
-
 <br>
 
 ## 01\_한 입 크기로 잘라먹는 TypeScript (inflearn-lecture)
@@ -21,9 +11,9 @@
 This is the code sample repo for _Effective TypeScript: 62 Specific Ways to Improve Your TypeScript_. The book is available through:This is the code sample repo for _Effective TypeScript: 62 Specific Ways to Improve Your TypeScript_. The book is available through:This is the code sample repo for _Effective TypeScript: 62 Specific Ways to Improve Your TypeScript_. The book is available through:This is the code sample repo for _Effective TypeScript: 62 Specific Ways to Improve Your TypeScript_. The book is available through:This is the code sample repo for _Effective TypeScript: 62 Specific Ways to Improve Your TypeScript_. The book is available through:This is the code sample repo for _Effective TypeScript: 62 Specific Ways to Improve Your TypeScript_. The book is available through:This is the code sample repo for _Effective TypeScript: 62 Specific Ways to Improve Your TypeScript_. The book is available through:
 
 - [:memo: section01][section01] : 타입스크립트 소개 JS의 단점과 TS의 장점, 타입스크립트의 동작 원리 및 컴파일러 옵션 설정
-- [:memo: section02][section02] : 타입스크립트 기본형 타입 ( 원시/리터럴 타입, 배열과 튜플, 객체, 타입 별칭과 인덱스 시그니처 등 )
-- [:memo: section03][section03] : 타입은 값들의 집합이다. ( 객체 타입의 호환성, Union, interaction, 타입 추론, 타입 단언...)
-- [:memo: section04][section04] : 함수와 타입 ( 함수타입 표현식, 호출 시그니처, 함수타입의 호환성, 오버로딩, 사용자 정의 타입 가드 )
+- [:memo: section02][section02] : 타입스크립트 기본형 타입 (원시/리터럴 타입, 배열/튜플, 객체, 타입별칭과 인덱스 시그니처)
+- [:memo: section03][section03] : 타입은 값들의 집합이다. (객체 타입의 호환성, Union, interaction, 타입추론, 타입단언)
+- [:memo: section04][section04] : 함수와 타입 (함수타입 표현식, 호출 시그니처, 함수타입의 호환성, 오버로딩, 사용자정의 타입가드)
 - [:memo: section05][section05] : 인터페이스
 - [:memo: section06][section06] : 클래스
 - [:memo: section07][section07] : 제네릭 ( map, forEach, 제네릭 인터페이스/타입별칭, 프로미스와 제레릭 )
@@ -38,13 +28,16 @@ This is the code sample repo for _Effective TypeScript: 62 Specific Ways to Impr
 
 <img src="https://github.com/thdud2262/study-typescript/assets/85012454/531b6998-533b-45b2-a52a-50881c6b4ed8" width="280" title="Cover Image" align="left">
 
-This is the code sample repo for _Effective TypeScript: 62 Specific Ways to Improve Your TypeScript_. The book is available through:
+his is the code sample repo for _Effective TypeScript: 62 Specific Ways to Improve Your TypeScript_. The book is available through:This is the code sample repo for _Effective TypeScript: 62 Specific Ways to Improve Your TypeScript_. The book is available through:This is the code sample repo for _Effective TypeScript: 62 Specific Ways to Improve Your TypeScript_. The book is available through:This is the code sample repo for _Effective TypeScript: 62 Specific Ways to Improve Your TypeScript_. The book is available through:This is the code sample repo for _Effective TypeScript: 62 Specific Ways to Improve Your TypeScript_. The book is available through:This is the code sample repo for _Effective TypeScript: 62 Specific Ways to Improve Your TypeScript_. The book is available through:This is the code sample repo for _Effective TypeScript: 62 Specific Ways to Improve Your TypeScript_. The book is available through:
 
-- [Amazon][a]
-- [O'Reilly][o]
-- [DRM-Free eBook][ebook]
-  and others.
-  You can get the latest updates on the book at <https://effectivetypescript.com>.
+- [:memo: chapter01][chapter01] : 타입스크립트 알아보기
+- [:memo: chapter01][chapter02] : 타입스크립트 타입 시스템
+- [:memo: chapter01][chapter03] : 타입 추론
+- [:memo: chapter01][chapter04] : 타입 설계
+- [:memo: chapter01][chapter05] : any다루기
+- [:memo: chapter01][chapter06] : 타입선언과 @types
+- [:memo: chapter01][chapter07] : 코드를 작성하고 실행하기
+- [:memo: chapter01][chapter08] : 타입스크립트로 마이그레이션하기
 
 <!-- 한입 TypeScript -->
 
