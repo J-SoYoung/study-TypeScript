@@ -1,40 +1,37 @@
-// language type : string
-function setLanguage(language: string) { /* ... */ }
+/**타입 추론이 문맥에서 어떻게 사용되는가 */
 
-setLanguage('JavaScript');  // OK
-
-let language = 'JavaScript';
-setLanguage(language);  // OK
-
-// language2 type : Union literal typt
+////////////////////////////////////////////
+// 리터럴 타입 사용시 
 type Language2 = 'JavaScript' | 'TypeScript' | 'Python';
-function setLanguage2(language: Language2) { /* ... */ }
+function setLanguage(language: Language2) { /* ... */ }
 
-let language2: Language2 = 'JavaScript';
-setLanguage2(language2);  // OK
+// language1 인수는 string에 할당할 수 없다 
+let language1 = 'JavaScript'; 
+// setLanguage(language1);     
+
+let language2:Language2 = 'JavaScript';
+setLanguage(language2);     
+
+const language3 = "JavaScript"
+setLanguage(language3);
 
 
-// 튜플 사용시 ---------------------------------------------------
+////////////////////////////////////////////
+// 튜플 타입 사용시 
 function panTo(where: [number, number]) { /* ... */ }
 
-// 명확한 타입을 가진 인수로 함수 호출을 하게 되면 문제가 없다.
 panTo([10,20])
 
-// 인수를 변수로 빼서 만들고 이를 호출하는 경우 TS의 타입추론에 문제가 생길 수 있다 
-const loc = ([10, 20])
-// panTo(loc) // number[]형식의 인수는 [number, number] 형식의 매개변수에 할당할 수 없다
-
-// 변수를 만들었을 경우에는 변수에 명확한 타입 지정을 해야 한다
 const loc2: [number, number] = [10, 20];
 panTo(loc2);  // OK
 
-// 혹은 as const로 상수 문맥을 제공한다 => 이는 너무 과한 정확성이므로 readonly가 되어버리므로 비추..
-const loc3 = [10, 20] as const;
-// panTo(loc3);
-   // ~~~ Type 'readonly [10, 20]' is 'readonly' ... 오히려 과한 에러 발생ㅋㅋ
+// number[]형식의 인수는 [number, number] 형식의 매개변수에 할당할 수 없다
+const loc = ([10, 20])
+// panTo(loc) 
 
 
-// 객체 사용시 문제점
+////////////////////////////////////////////
+// 객체 사용시 문제점 
 type Language = 'JavaScript' | 'TypeScript' | 'Python';
 interface GovernedLanguage {
   language: Language;
@@ -43,15 +40,41 @@ interface GovernedLanguage {
 
 function complain(language: GovernedLanguage) { /* ... */ }
 
+// 함수 매개변수(객체)에 바로 타입을 지정한 경우
 complain({ language: 'TypeScript', organization: 'Microsoft' });  // OK
 
-const ts : GovernedLanguage = {
-// const ts = { // TS의 타입추론이 아닌 명확한 타입을 지정해줘야 한다
-  language: 'TypeScript',
-  organization: 'Microsoft',
-};
-complain(ts);
-// ts에 타입지정을 하지 않았을 경우, 
-// 리터럴 스트링 유니온 타입의 객체를 string으로 보기 때문에 TypeError
+// ts를 변수로 빼서 작성한 경우 
+// (1)Error 
+// const ts = { language: 'TypeScript', organization: 'Microsoft' };
+// complain(ts);
 
+const ts2:GovernedLanguage = { language: 'TypeScript', organization: 'Microsoft' };
+complain(ts2);
+
+const ts3 = { language: 'TypeScript', organization: 'Microsoft' } as const
+complain(ts3)
+
+
+
+////////////////////////////////////////////////////////
+// 콜백 함수에서의 타입추론
+function callWithRandomNumbers(fn: (n1: number, n2: number) => void) {
+  fn(Math.random(), Math.random());
+}
+
+// 함수 내부에서 a와 b의 값의 추론은 잘 이루어진다.
+// 함수 내부의 a,b콜백함수를 외부로 빼려고 한다. => 문맥 손실 우려
+callWithRandomNumbers((a, b) => {
+  a;  // Type is number
+  b;  // Type is number
+  console.log(a + b);
+});
+
+// f1로 만든 상수는 함수 내부의 문맥을 잃어 타입을 찾지 못함
+// const fn1 = (a, b) => { console.log(a + b)} 
+// callWithRandomNumbers(fn1);
+
+// 상수로 뺀 콜백함수에 타입을 지정해주면 된다.
+const fn2 = (a:number, b:number) => { console.log(a + b)} 
+callWithRandomNumbers(fn2);
 
