@@ -5,22 +5,23 @@
 ## 01\_한 입 크기로 잘라먹는 TypeScript (inflearn-lecture)
 
 <img src="https://github.com/thdud2262/study-typescript/assets/85012454/6b5f734e-bbf6-4892-b0ce-18e5c9e50ef4" width="280" title="Cover Image" align="left">
-<br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br>
+<br><br>
 
 ### 강의내용 및 노트
 
-| 번호 | 제목                          | 내용                                                                                            |
-| ---- | ----------------------------- | ----------------------------------------------------------------------------------------------- |
-| 1    | [:memo: section01][section01] | 타입스크립트 소개, JS의 단점과 TS의 장점, <br>타입스크립트의 동작 원리 및 컴파일러 옵션 설정    |
-| 2    | [:memo: section02][section02] | 타입스크립트 기본형 타입 (원시/리터럴 타입, 배열/튜플, 객체, 타입별칭과 인덱스 시그니처)        |
-| 3    | [:memo: section03][section03] | 타입은 값들의 집합이다. (객체 타입의 호환성, Union, intersection, 타입추론, 타입단언)           |
-| 4    | [:memo: section04][section04] | 함수와 타입 (함수타입 표현식, 호출 시그니처, 함수타입의 호환성, 오버 )                          |
-| 5    | [:memo: section05][section05] | 인터페이스                                                                                      |
-| 6    | [:memo: section06][section06] | 클래스                                                                                          |
-| 7    | [:memo: section07][section07] | 제네릭 ( map, forEach, 제네릭 인터페이스/타입별칭, 프로미스와 제레릭 )                          |
-| 8    | [:memo: section08][section08] | 타입 조작하기 (인덱스 엑세스드 타입, keyof/typeof, Mapped type, 템플릿 리터럴 타입)             |
-| 9    | [:memo: section09][section09] | 조건부 타입                                                                                     |
-| 10   | [:memo: section10][section10] | 유틸리티 타입 ( Partial, Required, Readonly, Record, Pick, Omit, Exclude, Extract, ReturnType ) |
+| 제목                          | 내용                                                                                            |
+| ----------------------------- | ----------------------------------------------------------------------------------------------- |
+| [:memo: section01][section01] | 타입스크립트 소개, JS의 단점과 TS의 장점, <br>타입스크립트의 동작 원리 및 컴파일러 옵션 설정    |
+| [:memo: section02][section02] | 타입스크립트 기본형 타입 (원시/리터럴 타입, 배열/튜플, 객체, 타입별칭과 인덱스 시그니처)        |
+| [:memo: section03][section03] | 타입은 값들의 집합이다. (객체 타입의 호환성, Union, intersection, 타입추론, 타입단언)           |
+| [:memo: section04][section04] | 함수와 타입 (함수타입 표현식, 호출 시그니처, 함수타입의 호환성, 오버 )                          |
+| [:memo: section05][section05] | 인터페이스                                                                                      |
+| [:memo: section06][section06] | 클래스                                                                                          |
+| [:memo: section07][section07] | 제네릭 ( map, forEach, 제네릭 인터페이스/타입별칭, 프로미스와 제레릭 )                          |
+| [:memo: section08][section08] | 타입 조작하기 (인덱스 엑세스드 타입, keyof/typeof, Mapped type, 템플릿 리터럴 타입)             |
+| [:memo: section09][section09] | 조건부 타입                                                                                     |
+| [:memo: section10][section10] | 유틸리티 타입 ( Partial, Required, Readonly, Record, Pick, Omit, Exclude, Extract, ReturnType ) |
 
 <br>
 <br>
@@ -29,16 +30,16 @@
 
 <img src="https://github.com/thdud2262/study-typescript/assets/85012454/531b6998-533b-45b2-a52a-50881c6b4ed8" width="280" title="Cover Image" align="left">
 
-| 번호 | 제목                          | 내용                                                                                                              |
-| ---- | ----------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| 1    | [:memo: chapter01][chapter01] | 타입스크립트 소개<br>item01-rrrrrrrrrrrrr<br>item01-rrrrrrrrrrrrr<br>item01-rrrrrrrrrrrrr<br>item01-rrrrrrrrrrrrr |
-| 2    | [:memo: chapter02][chapter02] | 타입스크립트 타입 시스템<br>item01-rrrrrrrrrrrrr<br>item01-rrrrrrrrrrrrr                                          |
-| 3    | [:memo: chapter03][chapter03] | 타입 추론                                                                                                         |
-| 4    | [:memo: chapter04][chapter04] | 타입 설계                                                                                                         |
-| 5    | [:memo: chapter05][chapter05] | any다루기                                                                                                         |
-| 6    | [:memo: chapter06][chapter06] | 타입선언과 @types                                                                                                 |
-| 7    | [:memo: chapter07][chapter07] | 코드를 작성하고 실행하기                                                                                          |
-| 8    | [:memo: chapter08][chapter08] | 타입스크립트로 마이그레이션하기                                                                                   |
+| 제목                          | 내용                                                             |
+| ----------------------------- | ---------------------------------------------------------------- |
+| [:memo: chapter01][chapter01] | 타입스크립트 소개<br>item01-r                                     |                         
+| [:memo: chapter02][chapter02] | 타입스크립트 타입 시스템<br>item01-rrrrrr                          |
+| [:memo: chapter03][chapter03] | 타입 추론                                                         |
+| [:memo: chapter04][chapter04] | 타입 설계                                                         |
+| [:memo: chapter05][chapter05] | any다루기                                                         |
+| [:memo: chapter06][chapter06] | 타입선언과 @types                                                 |
+| [:memo: chapter07][chapter07] | 코드를 작성하고 실행하기                                           |
+| [:memo: chapter08][chapter08] | 타입스크립트로 마이그레이션하기                                     |
 
 <!-- 한입 TypeScript -->
 
