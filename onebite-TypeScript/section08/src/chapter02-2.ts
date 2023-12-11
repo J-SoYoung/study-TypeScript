@@ -12,14 +12,13 @@ type Person = typeof person
 function getPersonKey ( person: Person, key: keyof typeof person ){
   // typeof person으로 person객체의 타입을 추론해 저장하고, 
   // typeof로 가져온 타입들을 keyof를 통해 유니온 화 시킨다.  
-  return person[key]
+  return `${key}는 ${person[key]}다`;
 }
 
 const person = {
   name : "정소영",
-  age : 31
-}
+  age : 20
+};
 
-getPersonKey(person, 'name')
-
+console.log(getPersonKey(person, 'name'))
 
