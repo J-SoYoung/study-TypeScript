@@ -1,13 +1,13 @@
+import { useTodoDispatch } from "../App";
 import { Todo } from "../type";
 
-interface Props extends Todo {
-  onClickDelete:(id:number) => void
-}
-
+interface Props extends Todo {}
 
 export default function TodoItem(props:Props){
+  const dispatch = useTodoDispatch()
+
   const onClickDelete=()=>{
-    props.onClickDelete(props.id)
+    dispatch.onClickDelete(props.id)
   }
   
   return(
