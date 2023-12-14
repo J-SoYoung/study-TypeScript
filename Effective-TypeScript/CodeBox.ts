@@ -312,36 +312,128 @@ type OptionsUpdate2 = { [k in keyof Options]?: Options[k] };
 // 매핑된 속성으로 키값 나열, 값도 키값에 따라. 
 
 ///////////////////////////////////////////////
-/** */
+/** item19 비구조화 할당문으로 사용해 타입 지정*/
+interface Product {
+  id: string;
+  name: string;
+  price: number;
+}
+// 비구조화 할당
+function logProduct(product: Product) {
+  const {id, name, price} = product;
+}
+// 타입지정
+function logProduct2(product: Product) {
+  const {id, name, price}: {id: string; name: string; price: number } = product;
+  console.log(id, name, price);
+}
+
+///////////////////////////////////////////////
+/** item19 프로미스 함수 결과값 타입넣기  */
+const cache: {[ticker: string]: number} = {};
+function getQuote2(ticker: string): Promise<number> {
+  if (ticker in cache) {
+    return Promise.resolve(cache[ticker]);
+  }
+  return fetch(`https://quotes.example.com/?q=${ticker}`)
+      .then(response => response.json())
+      .then(quote => {
+        cache[ticker] = quote;
+        return quote;
+      });
+}
+
+///////////////////////////////////////////////
+/** item22 instanceof로 타입 좁히기 */
+function contains(text: string, search: string|RegExp) {
+  if (search instanceof RegExp) {
+    search  // Type is RegExp
+    return !!search.exec(text);
+  }
+  search  // Type is string
+  return text.includes(search);
+}
+
+///////////////////////////////////////////////
+/** item22 명시적 태그 붙여 타입 좁히기 */
+interface UploadEvent { type: 'upload'; filename: string; contents: string }
+interface DownloadEvent { type: 'download'; filename: string; }
+type AppEvent = UploadEvent | DownloadEvent;
+
+function handleEvent(e: AppEvent) {
+  switch (e.type) {
+    case 'download':
+      e  // Type is DownloadEvent
+      break;
+    case 'upload':
+      e;  // Type is UploadEvent
+      break;
+  }
+}
+
+///////////////////////////////////////////////
+/** item22 사용자 정의 타입 가드로 타입 좁히기 */
+function isInputElement(el: HTMLElement): el is HTMLInputElement {
+  return 'value' in el;
+}
+
+function getElementContent(el: HTMLElement) {
+  if (isInputElement(el)) {
+    el; // Type is HTMLInputElement
+    return el.value;
+  }
+  el; // Type is HTMLElement
+  return el.textContent;
+}
+
+///////////////////////////////////////////////
+/** item22 사용자 정의 타입 가드로 타입 좁히기 (2) */
+// undefinde가 잘 걸러지지 않는다
+const jackson5 = ['Jackie', 'Tito', 'Jermaine', 'Marlon', 'Michael'];
+const members = ['Janet', 'Michael'].map(
+  who => jackson5.find(n => n === who)
+);  // Type is (string | undefined)[]
+
+// 사용자 정의 타입 가드로 타입을 좁힐 수 있다
+const jackson52 = ['Jackie', 'Tito', 'Jermaine', 'Marlon', 'Michael'];
+function isDefined<T>(x: T | undefined): x is T {
+  return x !== undefined;
+}
+const members2 = ['Janet', 'Michael'].map(
+  who => jackson52.find(n => n === who)
+).filter(isDefined);  // Type is string[]
 
 
 ///////////////////////////////////////////////
-/**  */
+/** itme23 객체 생성은 한꺼번에 */
+// pt를 빈 객체로 두고 x,y를 추가하면 Error남
+interface Point { x: number; y: number; }
+const pt = {
+  x: 3,
+  y: 4,
+};  // OK
+
+// 작은 객체를 조합해 큰 객체를 만들어야 할 때 스프레드 연산자 사용
+interface Point2 { x: number; y: number; }
+const pt2 = {x: 3, y: 4};
+const id2 = {name: 'Pythagoras'};
+const namedPoint = {...pt2, ...id2};
+namedPoint.name;  // OK, type is string
 
 
 ///////////////////////////////////////////////
-/**  */
+/** item 26 타입 지정  */
+type Language2 = 'JavaScript' | 'TypeScript' | 'Python';
+function setLanguage(language: Language2) { /* ... */ }
+    
 
+// 정확한 타입을 지정해줘야 한다 
+let language2:Language2 = 'JavaScript';
+setLanguage(language2);     
 
-///////////////////////////////////////////////
-/**  */
-
-
-///////////////////////////////////////////////
-/**  */
-
-
-///////////////////////////////////////////////
-/**  */
-
-
-///////////////////////////////////////////////
-/**  */
-
-
-///////////////////////////////////////////////
-/**  */
-
+// 혹은 language를 const 상수로 지정해도 된다. 
+const language3 = "JavaScript"
+setLanguage(language3);
 
 ///////////////////////////////////////////////
 /**  */
