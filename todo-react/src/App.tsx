@@ -1,12 +1,15 @@
-import React from 'react';
-import './App.css';
+import React, { FC, ReactElement } from 'react';
+import { ThemeProvider, CssBaseline } from '@mui/material';
+import { customTheme } from './theme/customTheme';
+import { Dashboard } from './pages/dashboard/Dashboard';
 
-function App() {
+const App: FC = (): ReactElement => {
   return (
-    <div className="App">
-      <h1>우와 난 이제 공부뿐이야.</h1>
-    </div>
+    <ThemeProvider theme={customTheme}>
+      <CssBaseline />
+      <Dashboard />
+    </ThemeProvider>
   );
-}
+};
 
 export default App;
