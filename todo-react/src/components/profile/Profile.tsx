@@ -1,10 +1,5 @@
 import React, { FC, ReactElement } from 'react';
-import {
-  Grid,
-  Avatar,
-  Box,
-  Typography,
-} from '@mui/material';
+import { Avatar, Box, Typography } from '@mui/material';
 import { pink } from '@mui/material/colors';
 import PropTypes from 'prop-types';
 
@@ -12,9 +7,7 @@ interface IProfile {
   name?: string;
 }
 
-export const Profile: FC<IProfile> = (
-  props,
-): ReactElement => {
+export const Profile: FC<IProfile> = (props): ReactElement => {
   const { name = 'SoYoung' } = props;
 
   return (
@@ -46,6 +39,6 @@ export const Profile: FC<IProfile> = (
   );
 };
 
-// Profile.propTypes = {
-//   name: PropTypes.string,
-// };
+Profile.propTypes = {
+  name: PropTypes.string.isRequired,
+};
