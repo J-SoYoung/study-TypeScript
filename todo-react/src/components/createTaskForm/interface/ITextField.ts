@@ -1,8 +1,5 @@
 import React from 'react';
-
-export interface IDisabled {
-  disabled?: boolean;
-}
+import { IDisabled } from './IDisable';
 
 export interface ITextField extends IDisabled {
   onChange?: (
