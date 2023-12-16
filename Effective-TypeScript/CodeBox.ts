@@ -17,7 +17,7 @@ for (const state of states) {
 ///////////////////////////////////////////////
 /** item3
  * extends로 타입 확장한 뒤에, 
- * in연산자로 타입 좁히기 
+ * in 연산자로 타입 좁히기 
  * */
 interface Square {
   width: number;
@@ -435,13 +435,45 @@ setLanguage(language2);
 const language3 = "JavaScript"
 setLanguage(language3);
 
-///////////////////////////////////////////////
-/**  */
-
 
 ///////////////////////////////////////////////
-/**  */
+/* 타입가드 in 연산자 + type을 & 인터섹션으로 묶기 */
+type Athlete = { name : string ; country: String}
+type Swimmier = Athlete & { swim : ()=> void }
+type Runner = Athlete & { run : ()=> void }
 
+function moveAthlete (athlete : Swimmier | Runner ){
+  if('run' in athlete ){
+    return athlete.run()
+  }
+  return athlete.swim()
+}
+
+const thdud = {
+  name:'thdud',
+  country: 'Korea',
+  swim: function(){console.log(`${this.name}!!!, swimmer`)}
+}
+moveAthlete(thdud)
+
+
+///////////////////////////////////////////////
+/** 타입가드 predicate 사용자 정의 타입가드 */
+type Athlete2 = { name : string ; country: String}
+type Swimmier2 = Athlete2 & { swim : ()=> void }
+type Runner2 = Athlete2 & { run : ()=> void }
+
+function isRunner(athlete: Runner2 | Swimmier2): athlete is Runner2{
+  return (athlete as Runner2).run !== undefined
+}
+
+function moveAthlete2 (athlete : Swimmier2 | Runner2 ){
+  if(isRunner(athlete)){
+    athlete.run()
+  }else {
+  athlete.swim()
+  }
+}
 
 ///////////////////////////////////////////////
 /**  */
