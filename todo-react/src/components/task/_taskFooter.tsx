@@ -6,8 +6,16 @@ import {
   Switch,
 } from '@mui/material';
 import PropTypes from 'prop-types';
+import { ITaskFooter } from './interface/ITaskFooter';
 
-export const TaskFooter: FC = (): ReactElement => {
+export const TaskFooter: FC<ITaskFooter> = (
+  props,
+): ReactElement => {
+  const {
+    onStatusChange = (e) => console.log(e),
+    onClick = (e) => console.log(e),
+  } = props;
+
   return (
     <Box
       display={'flex'}
@@ -16,7 +24,12 @@ export const TaskFooter: FC = (): ReactElement => {
       mt={4}
     >
       <FormControlLabel
-        control={<Switch color="warning" />}
+        control={
+          <Switch
+            color="warning"
+            onChange={(e) => onStatusChange(e)}
+          />
+        }
         label="in Progress"
       />
       <Button
@@ -24,6 +37,7 @@ export const TaskFooter: FC = (): ReactElement => {
         color="success"
         size="small"
         sx={{ color: '#fff' }}
+        onClick={(e) => onClick(e)}
       >
         Mark Complete
       </Button>
@@ -31,6 +45,7 @@ export const TaskFooter: FC = (): ReactElement => {
   );
 };
 
-// TaskFooter.propTypes = {
-
-// };
+TaskFooter.propTypes = {
+  onStatusChange: PropTypes.func,
+  onClick: PropTypes.func,
+};
