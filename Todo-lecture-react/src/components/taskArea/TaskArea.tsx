@@ -43,12 +43,6 @@ export const TaskArea: FC = (): ReactElement => {
           <Grid>
             <Task />
           </Grid>
-          <Grid>
-            <Task />
-          </Grid>
-          <Grid>
-            <Task />
-          </Grid>
         </Grid>
       </Grid>
     </Box>
