@@ -7,7 +7,10 @@ import {
 import { deepOrange } from '@mui/material/colors';
 import React, { FC, ReactElement } from 'react';
 
-export const Profile: FC = (): ReactElement => {
+type User = { username: string };
+
+export const Profile: FC<User> = (props): ReactElement => {
+  const { username } = props;
   return (
     <Box
       display="flex"
@@ -25,11 +28,11 @@ export const Profile: FC = (): ReactElement => {
         }}
       >
         <Typography variant="h4" color="white">
-          T
+          {username.slice(0,1)}
         </Typography>
       </Avatar>
-      <Typography variant="h5" color="white">
-        welcome to my homepage
+      <Typography variant="h6" color="white">
+        welcome to my homepage {username}
       </Typography>
       <Typography variant="body1" color="white">
         this is your personal tasks manager
