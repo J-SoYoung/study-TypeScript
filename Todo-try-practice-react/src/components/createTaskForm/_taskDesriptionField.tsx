@@ -1,7 +1,16 @@
 import { Box, TextField } from '@mui/material';
 import React, { FC, ReactElement } from 'react';
+import { BasicType } from './types/BasicFormType';
 
-export const TaskDescriptionField = () => {
+export const TaskDescriptionField: FC<BasicType> = (
+  props,
+): ReactElement => {
+  const {
+    disabled = false,
+    onChange = (e) => {
+      console.log(e.target.value);
+    },
+  } = props;
   return (
     <TextField
       id="description"
@@ -12,10 +21,8 @@ export const TaskDescriptionField = () => {
       size="small"
       multiline
       fullWidth
-      onChange={(e) => console.log(e)}
-      disabled={false}
-      // onChange={onChange}
-      // disabled={disabled}
+      onChange={onChange}
+      disabled={disabled}
     />
   );
 };
