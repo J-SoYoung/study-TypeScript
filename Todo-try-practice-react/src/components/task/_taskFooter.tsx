@@ -7,8 +7,15 @@ import {
   Typography,
 } from '@mui/material';
 import React, { FC, ReactElement } from 'react';
+import { typeFooter } from './types/typeFooter';
 
-export const TaskFooter: FC = (): ReactElement => {
+export const TaskFooter: FC<typeFooter> = (
+  props,
+): ReactElement => {
+  const {
+    onChange = (e) => console.log(e.target),
+    onClick = (e) => console.log(e.target),
+  } = props;
   return (
     <Box
       display="flex"
@@ -19,10 +26,7 @@ export const TaskFooter: FC = (): ReactElement => {
       <FormControlLabel
         label="In Progress"
         control={
-          <Switch
-            onChange={(e) => console.log(e)}
-            color="warning"
-          />
+          <Switch onChange={onChange} color="warning" />
         }
       />
       <Button
@@ -30,7 +34,7 @@ export const TaskFooter: FC = (): ReactElement => {
         color="success"
         size="small"
         sx={{ color: '#ffffff' }}
-        onClick={(e) => console.log(e)}
+        onClick={onClick}
       >
         Mark Complete
       </Button>
