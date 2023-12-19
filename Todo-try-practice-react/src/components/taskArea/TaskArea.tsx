@@ -3,10 +3,25 @@ import React, { FC, ReactElement } from 'react';
 import { Task } from '../task/Task';
 import { TaskCounter } from '../taskCounter/TaskCounter';
 import { format } from 'date-fns';
+import { Status } from '../createTaskForm/enum/Status';
+import { TaskCounterStatusType } from '../taskCounter/types/TaskCounterTypes';
 
 export const TaskArea: FC = (): ReactElement => {
+  const statusList: TaskCounterStatusType[] = [
+    Status.todo,
+    Status.inProgress,
+    Status.completed,
+  ];
+
   return (
-    <Grid item sx={{ width: '66%', padding: '16px' , boxSizing: 'border-box'}}>
+    <Grid
+      item
+      sx={{
+        width: '66%',
+        padding: '16px',
+        boxSizing: 'border-box',
+      }}
+    >
       <Box mb={8} px={4}>
         <h2 style={{ color: '#f08c00' }}>
           Today - {format(new Date(), 'PPPP')}
@@ -29,13 +44,14 @@ export const TaskArea: FC = (): ReactElement => {
           mb={8}
           width={'100%'}
         >
-          <TaskCounter />
-          <TaskCounter />
-          <TaskCounter />
+          {/* <TaskCounter /> */}
+          {statusList.map((ele, idx) => {
+            return (
+              <TaskCounter key={ele + idx} status={ele} />
+            );
+          })}
         </Grid>
         <Grid>
-          <Task />
-          <Task />
           <Task />
         </Grid>
       </Grid>
