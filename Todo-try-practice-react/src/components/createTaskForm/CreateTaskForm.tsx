@@ -1,16 +1,11 @@
-import {
-  Avatar,
-  Box,
-  Grid,
-  Stack,
-  Typography,
-} from '@mui/material';
-import { deepOrange } from '@mui/material/colors';
+import { Box, Stack, Typography } from '@mui/material';
 import React, { FC, ReactElement } from 'react';
 import { TaskTitleField } from './_taskTitleField';
 import { TaskDescriptionField } from './_taskDesriptionField';
 import { TaskDateField } from './_taskDateField';
 import { TaskSelectField } from './_taskSelectField';
+import { Status } from './enum/Status';
+import { Priority } from './enum/Priority';
 
 export const CreateTaskForm: FC = (): ReactElement => {
   return (
@@ -48,8 +43,42 @@ export const CreateTaskForm: FC = (): ReactElement => {
           sx={{ width: '100%' }}
           direction="row"
         >
-          <TaskSelectField />
-          <TaskSelectField />
+          <TaskSelectField
+            label="Status"
+            name="status"
+            items={[
+              {
+                value: Status.todo,
+                label: Status.todo.toUpperCase(),
+              },
+              {
+                value: Status.completed,
+                label: Status.completed.toUpperCase(),
+              },
+              {
+                value: Status.inProgress,
+                label: Status.inProgress.toUpperCase(),
+              },
+            ]}
+          />
+          <TaskSelectField
+            label="Priority"
+            name="priority"
+            items={[
+              {
+                value: Priority.low,
+                label: Priority.low,
+              },
+              {
+                value: Priority.normal,
+                label: Priority.normal,
+              },
+              {
+                value: Priority.high,
+                label: Priority.high,
+              },
+            ]}
+          />
         </Stack>
       </Stack>
     </Box>
