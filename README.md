@@ -1,4 +1,7 @@
 # Typescript Study Note
+책, 강의, 연습용 프로젝트 등의 폴더들이 많이 때문에 폴더명 맨 앞을 대문자로 구분하였습니다.<br>
+[B]book책, [L]lecture강의, [P]practice연습 <br>
+
 
 <br>
 
