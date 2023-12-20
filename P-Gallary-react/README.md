@@ -1,10 +1,10 @@
-# TypeScript Practice ToyProject - gallary
+# TypeScript Practice ToyProject - Diary
 
-- Effective-TypeScript
+- Effective-TypeScript 
 - 한입 타입스크립트 강의
 - TypeScript-Programming
-  위 책과 강의로 타입스크립트의 문법과 활용, 구조에 대해 공부하였습니다.<br>
-  이후 실제로 코드에 연습해보는 다이어리 토이 프로젝트입니다.
+위 책과 강의로 타입스크립트의 문법과 활용, 구조에 대해 공부하였습니다.<br>
+이후 실제로 코드에 연습해보는 다이어리 토이 프로젝트입니다.
 
 ### 목표
 
