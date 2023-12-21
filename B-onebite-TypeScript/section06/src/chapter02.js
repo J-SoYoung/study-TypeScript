@@ -20,7 +20,7 @@ var Employee = /** @class */ (function () {
     }
     // 메서드
     Employee.prototype.work = function () {
-        console.log("".concat(this.name, "\uC740 \uC624\uB298\uB3C4 \uC5F4\uC77C\uD569\uB2C8\uB2E4!!!"));
+        console.log("".concat(this.name, "오늘도 열공합니다!!!"));
     };
     return Employee;
 }());
