@@ -1,4 +1,7 @@
 # 한 입 크기로 잘라먹는 타입스크립트 강의
+- JavaScript의 예제 코드는 https://playcode.io/javascript 에서 실행할 수 있습니다.
+- TypeScript의 예제 코드는 https://www.typescriptlang.org/play 에서 실행할 수 있습니다.
+<br>
 
 ### section01_Intro
 - TypeScript 기본설정 및 코드실행
@@ -32,3 +35,28 @@
 - **interface** - 타입 별칭과 동일하게 타입에 이름을 붙이는 문법, 객체의 구조를 정의하기 편하다 (상속 기능 등)
 - interface는 extends를 활용하여 타입을 상속받아 확장할 수 있다.
 - interface는 동일한 키워드로 type을 중복선언 하게 되면 두 type이 합쳐진다.
+
+### section06_class
+클래스는 동일한 모양의 객체를 생성할 수 있도록 도와주는 문법이다. 
+- JavaScript에서의 클래스 예제
+- TypeScript에서의 클래스 예제 
+
+### section07_제네릭
+제네릭은 타입이 정해지지 않은 변수에 타입변수<T>를 지정하여 타입을 가변적으로 정할 수 있도록 해 주는 문법이다. 
+- 제네릭을 활용하여 map, forEach의 타입을 구현할 수 있다.
+
+### section08_타입 조적하기
+타입도 다양한 연산을 통해 정의할 수 있다. section8은 TypeScript의 고급 문법에 대한 내용이다.
+- 인덱스드 엑세스 타입 : 인덱스를 이용해 특정 프로퍼티 타입을 추출하는 방법
+- keyof 연산자 : 특정 객체 타입으로부터 key를 추출할 수 있는 방법
+- typeof 연산자 : 데이터 타입을 반환하는 연산자
+- mapped type : 객체 타입을 기반으로 새로운 객체타입을 만든다
+
+### section09_조건부타입
+삼항 연산자를 이용해 조건에 따라 다른 타입을 정의하는 문법, 제네릭과 함께 사용하면 장점이 더욱 부각된다. 
+
+### section10_유틸리티 타입
+- 타입스크립트가 자체적으로 제공하는 특수한 타입들이다. 
+- Partical, Required, Readonly, Record, Pick, Omit ... 
+
+### section11_React + TypeScript => TODO만들기  
