@@ -1,12 +1,12 @@
 # Typescript Study Note
-책, 강의, 연습용 프로젝트 등의 폴더들이 많이 때문에 폴더명 맨 앞을 대문자로 구분하였습니다.<br>
-[B]book책, [L]lecture강의, [P]practice연습 <br>
+책, 강의, 연습용 프로젝트 등의 폴더들이 많이 때문에 폴더명 앞의 대문자를 
+[B]book책, [L]lecture강의, [P]practice연습로 구분하였습니다 <br>
 
 
 <br>
 
 ## 01\_한 입 크기로 잘라먹는 TypeScript (inflearn-lecture)
- [:memo: onebite-main][ 한 입 TS - 해당 리드미로 이동 ] 
+ [:memo: onebite-main][ onebite-main ] 
 
 <img src="https://github.com/thdud2262/study-typescript/assets/85012454/6b5f734e-bbf6-4892-b0ce-18e5c9e50ef4" width="280" title="Cover Image" align="left">
 <br><br><br><br><br><br><br><br><br>
@@ -31,7 +31,7 @@
 <br>
 
 ## 02_Effective TypeScript
- [:memo: effective-main][ 한 입 TS - 해당 리드미로 이동 ] 
+ [:memo: effective-main][ effective-main ] 
 
 <img src="https://github.com/thdud2262/study-typescript/assets/85012454/531b6998-533b-45b2-a52a-50881c6b4ed8" width="280" title="Cover Image" align="left">
 
