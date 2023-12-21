@@ -5,9 +5,8 @@
 
 <br>
 
-## 01\_한 입 크기로 잘라먹는 TypeScript (inflearn-lecture)
- [:memo: onebite-main][ onebite-main ] 
-
+# 01_한 입 크기로 잘라먹는 TypeScript
+[:memo: onebite-main][ onebite-main ] 
 <img src="https://github.com/thdud2262/study-typescript/assets/85012454/6b5f734e-bbf6-4892-b0ce-18e5c9e50ef4" width="280" title="Cover Image" align="left">
 <br><br><br><br><br><br><br><br><br>
 <br><br>
@@ -30,8 +29,8 @@
 <br>
 <br>
 
-## 02_Effective TypeScript
- [:memo: effective-main][ effective-main ] 
+# 02_Effective TypeScript 
+[:memo: effective-main][ effective-main ]  
 
 <img src="https://github.com/thdud2262/study-typescript/assets/85012454/531b6998-533b-45b2-a52a-50881c6b4ed8" width="280" title="Cover Image" align="left">
 
@@ -45,6 +44,10 @@
 | [:memo: chapter06][chapter06] | 타입선언과 @types                                                 |
 | [:memo: chapter07][chapter07] | 코드를 작성하고 실행하기                                           |
 | [:memo: chapter08][chapter08] | 타입스크립트로 마이그레이션하기                                     |
+<br>
+<br>
+<br>
+<br>
 
 ## TypeScript-programming 
 <img src="./_image/typescript-programming.png" width="280" title="Cover Image" align="left">
