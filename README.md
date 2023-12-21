@@ -6,6 +6,7 @@
 <br>
 
 ## 01\_한 입 크기로 잘라먹는 TypeScript (inflearn-lecture)
+ [:memo: onebite-main][ 한 입 TS - 해당 리드미로 이동 ] 
 
 <img src="https://github.com/thdud2262/study-typescript/assets/85012454/6b5f734e-bbf6-4892-b0ce-18e5c9e50ef4" width="280" title="Cover Image" align="left">
 <br><br><br><br><br><br><br><br><br>
@@ -30,6 +31,7 @@
 <br>
 
 ## 02_Effective TypeScript
+ [:memo: effective-main][ 한 입 TS - 해당 리드미로 이동 ] 
 
 <img src="https://github.com/thdud2262/study-typescript/assets/85012454/531b6998-533b-45b2-a52a-50881c6b4ed8" width="280" title="Cover Image" align="left">
 
@@ -44,9 +46,12 @@
 | [:memo: chapter07][chapter07] | 코드를 작성하고 실행하기                                           |
 | [:memo: chapter08][chapter08] | 타입스크립트로 마이그레이션하기                                     |
 
+## TypeScript-programming 
+<img src="./_image/typescript-programming.png" width="280" title="Cover Image" align="left">
+
 
 <!-- 한입 TypeScript -->
-
+[onebite-main]: /L-onebite-TypeScript
 [section01]: /L-onebite-TypeScript/section01
 [section02]: /L-onebite-TypeScript/section02
 [section03]: /L-onebite-TypeScript/section03
@@ -59,7 +64,7 @@
 [section10]: /L-onebite-TypeScript/section10
 
 <!-- Effective TypeScript -->
-
+[effective-main]: /B-Effective-TypeScript
 [chapter01]: /B-Effective-TypeScript/CH01-TypeScript-intro
 [chapter02]: /B-Effective-TypeScript/CH02-Type-System
 [chapter03]: /B-Effective-TypeScript/CH03_Type-inference
@@ -68,3 +73,6 @@
 [chapter06]: /B-Effective-TypeScript/CH06-Type-Declarations
 [chapter07]: /B-Effective-TypeScript/CH07-Code-Write-Run
 [chapter08]: /B-Effective-TypeScript/CH08-Migrate
+
+<!-- TypeScript Programming -->
+[programming-main]: /B-TypeScript-programming
