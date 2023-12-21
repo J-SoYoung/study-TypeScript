@@ -49,8 +49,8 @@
 <br>
 <br>
 
-## TypeScript-programming 
-<img src="./_image/typescript-programming.png" width="280" title="Cover Image" align="left">
+# TypeScript-programming 
+<img src="./__image/typescript-programming.png" width="280" title="Cover Image" align="left">
 
 
 <!-- 한입 TypeScript -->
