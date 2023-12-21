@@ -47,24 +47,24 @@
 
 <!-- 한입 TypeScript -->
 
-[section01]: /onebite-TypeScript/section01
-[section02]: /onebite-TypeScript/section02
-[section03]: /onebite-TypeScript/section03
-[section04]: /onebite-TypeScript/section04
-[section05]: /onebite-TypeScript/section05
-[section06]: /onebite-TypeScript/section06
-[section07]: /onebite-TypeScript/section07
-[section08]: /onebite-TypeScript/section08
-[section09]: /onebite-TypeScript/section09
-[section10]: /onebite-TypeScript/section10
+[section01]: /L-onebite-TypeScript/section01
+[section02]: /L-onebite-TypeScript/section02
+[section03]: /L-onebite-TypeScript/section03
+[section04]: /L-onebite-TypeScript/section04
+[section05]: /L-onebite-TypeScript/section05
+[section06]: /L-onebite-TypeScript/section06
+[section07]: /L-onebite-TypeScript/section07
+[section08]: /L-onebite-TypeScript/section08
+[section09]: /L-onebite-TypeScript/section09
+[section10]: /L-onebite-TypeScript/section10
 
 <!-- Effective TypeScript -->
 
-[chapter01]: /Effective-TypeScript/CH01-TypeScript-intro
-[chapter02]: /Effective-TypeScript/CH02-Type-System
-[chapter03]: /Effective-TypeScript/CH03_Type-inference
-[chapter04]: /Effective-TypeScript/CH04-Type-Design
-[chapter05]: /Effective-TypeScript/CH05-any
-[chapter06]: /Effective-TypeScript/CH06-Type-Declarations
-[chapter07]: /Effective-TypeScript/CH07-Code-Write-Run
-[chapter08]: /Effective-TypeScript/CH08-Migrate
+[chapter01]: /B-Effective-TypeScript/CH01-TypeScript-intro
+[chapter02]: /B-Effective-TypeScript/CH02-Type-System
+[chapter03]: /B-Effective-TypeScript/CH03_Type-inference
+[chapter04]: /B-Effective-TypeScript/CH04-Type-Design
+[chapter05]: /B-Effective-TypeScript/CH05-any
+[chapter06]: /B-Effective-TypeScript/CH06-Type-Declarations
+[chapter07]: /B-Effective-TypeScript/CH07-Code-Write-Run
+[chapter08]: /B-Effective-TypeScript/CH08-Migrate
