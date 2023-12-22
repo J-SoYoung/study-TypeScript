@@ -1,5 +1,5 @@
 import React, { FC, ReactElement } from 'react';
-import styled from 'styled-components';
+import { InputTitle } from './styles/s_AlbumTextComp';
 
 type Props = {
   text: string;
@@ -9,7 +9,6 @@ type Props = {
 export const AlbumTextComp: FC<Props> = (
   props,
 ): ReactElement => {
-  
   const { text, setText } = props;
   const onChangeTextAdd = (
     e: React.ChangeEvent<HTMLInputElement>,
@@ -27,11 +26,3 @@ export const AlbumTextComp: FC<Props> = (
     />
   );
 };
-
-const InputTitle = styled.input`
-  width: 250px;
-  height: 40px;
-  border: none;
-  border-bottom: 1px solid teal;
-  outline: none;
-`;

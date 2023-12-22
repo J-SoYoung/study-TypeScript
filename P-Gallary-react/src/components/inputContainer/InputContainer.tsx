@@ -4,9 +4,9 @@ import React, {
   useRef,
   useState,
 } from 'react';
-import styled from 'styled-components';
 import { AlbumImageComp } from './_AlbumImageComp';
 import { AlbumTextComp } from './_AlbumTextComp';
+import { InputContainerBox } from './styles/s_InputContainer';
 
 type Props = {
   onClickCreateAlbum: (
@@ -41,10 +41,3 @@ export const InputContainer: FC<Props> = (
     </InputContainerBox>
   );
 };
-
-const InputContainerBox = styled.div`
-  border: 1px solid teal;
-  text-align: center;
-  padding: 20px;
-  box-sizing: border-box;
-`;

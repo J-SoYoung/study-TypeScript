@@ -6,8 +6,8 @@ import React, {
 } from 'react';
 import { InputContainer } from '../components/inputContainer/InputContainer';
 import { ViewContainer } from '../components/viewContainer/ViewContainer';
-import { Album } from '../components/inputContainer/types/typeAlbum';
-import styled from 'styled-components';
+import { Album } from '../components/types/typeAlbum';
+import { MainContaier, Title } from './styles/mainboard';
 
 export const MainBoard: FC = (): ReactElement => {
   // album-list
@@ -45,16 +45,3 @@ export const MainBoard: FC = (): ReactElement => {
     </MainContaier>
   );
 };
-
-const MainContaier = styled.div`
-  max-width: 1000px;
-  margin: 0 auto;
-`;
-const Title = styled.h1`
-  font-size: 32px;
-  font-weight: 700;
-  color: white;
-  background-color: teal;
-  padding: 16px;
-  box-sizing: border-box;
-`;

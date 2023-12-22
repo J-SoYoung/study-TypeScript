@@ -1,9 +1,5 @@
-import React, {
-  FC,
-  ReactElement,
-  useRef,
-} from 'react';
-import styled from 'styled-components';
+import React, { FC, ReactElement, useRef } from 'react';
+import { ImgBox, Preview } from './styles/s_AlbumImageComp';
 
 type Props = {
   setImage: (file: string) => void;
@@ -65,15 +61,3 @@ export const AlbumImageComp: FC<Props> = (
     </>
   );
 };
-
-const ImgBox = styled.div`
-  padding: 20px;
-  box-sizing: border-box;
-  cursor: pointer;
-`;
-const Preview = styled.img`
-  width: 300px;
-  height: 300px;
-  border-radius: 4px;
-  object-fit: cover;
-`;
