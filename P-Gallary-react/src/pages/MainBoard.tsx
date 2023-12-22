@@ -1,4 +1,9 @@
-import React, { FC, ReactElement, useState } from 'react';
+import React, {
+  FC,
+  ReactElement,
+  useEffect,
+  useState,
+} from 'react';
 import { InputContainer } from '../components/inputContainer/InputContainer';
 import { ViewContainer } from '../components/viewContainer/ViewContainer';
 import { Album } from '../components/inputContainer/types/typeAlbum';
@@ -8,11 +13,23 @@ export const MainBoard: FC = (): ReactElement => {
   // album-list
   const [albumList, setAlbumList] = useState<Album[]>([]);
 
+  useEffect(() => {
+    console.log(albumList);
+  }, [albumList]);
+
   const onClickCreateAlbum = (
     text: string,
     image: string,
+    id: number,
   ) => {
-    setAlbumList([...albumList, { text, image }]);
+    setAlbumList([...albumList, { text, image, id }]);
+  };
+
+  const onClickDeleteAlbum = (id: number) => {
+    const deleteAlbum = albumList.filter(
+      (album) => album.id !== id,
+    );
+    setAlbumList([...deleteAlbum]);
   };
 
   return (
@@ -21,7 +38,10 @@ export const MainBoard: FC = (): ReactElement => {
       <InputContainer
         onClickCreateAlbum={onClickCreateAlbum}
       />
-      <ViewContainer albumList={albumList} />
+      <ViewContainer
+        albumList={albumList}
+        onClickDeleteAlbum={onClickDeleteAlbum}
+      />
     </MainContaier>
   );
 };

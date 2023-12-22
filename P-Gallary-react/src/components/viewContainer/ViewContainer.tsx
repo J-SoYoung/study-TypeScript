@@ -4,12 +4,19 @@ import { Album } from '../inputContainer/types/typeAlbum';
 
 type Props = {
   albumList: Album[];
+  onClickDeleteAlbum: (id: number) => void;
 };
 
 export const ViewContainer: FC<Props> = (
   props,
 ): ReactElement => {
-  const { albumList } = props;
+  const { albumList, onClickDeleteAlbum } = props;
+
+  const onClickDelete = (id: number) => {
+    if (confirm('정말 삭제하시겠습니까?')) {
+      onClickDeleteAlbum(id);
+    }
+  };
 
   return (
     <ViewBox>
@@ -21,7 +28,15 @@ export const ViewContainer: FC<Props> = (
               width={'170px'}
               height={'180px'}
             />
-            <p>{album.text}</p>
+            <div>
+              <p>{album.text}</p>
+              <button
+                onClick={() => onClickDelete(album.id)}
+              >
+                {' '}
+                지우기{' '}
+              </button>
+            </div>
           </div>
         );
       })}
