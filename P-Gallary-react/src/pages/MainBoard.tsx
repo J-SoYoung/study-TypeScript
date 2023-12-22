@@ -2,16 +2,30 @@ import React, {
   FC,
   ReactElement,
   useEffect,
+  useReducer,
   useState,
 } from 'react';
 import { InputContainer } from '../components/inputContainer/InputContainer';
 import { ViewContainer } from '../components/viewContainer/ViewContainer';
-import { Album } from '../components/types/typeAlbum';
-import { MainContaier, Title } from './styles/mainboard';
+import { Action, Album } from '../types';
+import { MainContaier, Title } from './styles/s_Mainboard';
+
+function reducer(state: Album[], action: Action) {
+  switch (action.type) {
+    case 'CREATE': {
+      return [...state, action.data];
+    }
+    case 'DELETE': {
+      return state.filter(
+        (album) => album.id !== action.id,
+      );
+    }
+  }
+}
 
 export const MainBoard: FC = (): ReactElement => {
-  // album-list
-  const [albumList, setAlbumList] = useState<Album[]>([]);
+  const [albumList, dispatch] = useReducer(reducer, []);
+  // const [albumList, setAlbumList] = useState<Album[]>([]);
 
   useEffect(() => {
     console.log(albumList);
@@ -22,14 +36,26 @@ export const MainBoard: FC = (): ReactElement => {
     image: string,
     id: number,
   ) => {
-    setAlbumList([...albumList, { text, image, id }]);
+    dispatch({
+      type: 'CREATE',
+      data: {
+        text: text,
+        image: image,
+        id: id,
+      },
+    });
+    // setAlbumList([...albumList, { text, image, id }]);
   };
 
   const onClickDeleteAlbum = (id: number) => {
-    const deleteAlbum = albumList.filter(
-      (album) => album.id !== id,
-    );
-    setAlbumList([...deleteAlbum]);
+    dispatch({
+      type: 'DELETE',
+      id: id,
+    });
+    // const deleteAlbum = albumList.filter(
+    //   (album) => album.id !== id,
+    // );
+    // setAlbumList([...deleteAlbum]);
   };
 
   return (
