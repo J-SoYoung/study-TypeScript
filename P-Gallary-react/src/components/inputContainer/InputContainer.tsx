@@ -5,105 +5,40 @@ import React, {
   useState,
 } from 'react';
 import styled from 'styled-components';
+import { AlbumImageComp } from './_AlbumImageComp';
+import { AlbumTextComp } from './_AlbumTextComp';
 
-type ImageList = {
-  image?: string;
-  text?: string;
-}[];
+type Props = {
+  onClickCreateAlbum: (text: string, image: string) => void;
+};
 
-export const InputContainer: FC = (): ReactElement => {
-  // image-view
-  const [preview, setPreview] = useState<string>('');
+export const InputContainer: FC<Props> = (
+  props,
+): ReactElement => {
+  const [text, setText] = useState<string>('');
+  const [image, setImage] = useState<string>('');
 
-  // image-list
-  const imageViewList: ImageList = [];
-  const [imageList, setImageList] =
-    useState<ImageList>(imageViewList);
-  const inputRef = useRef<HTMLInputElement>(null);
-
-  const onChangeCreateImage = (
-    e: React.ChangeEvent<HTMLInputElement>,
-  ): void => {
-    try {
-      const file = e.target.files?.[0];
-      if (file) {
-        const reader = new FileReader();
-        reader.readAsDataURL(file);
-        reader.onloadend = () => {
-          setPreview(reader.result as string);
-        };
-      } else {
-        throw new RangeError('사진 파일이 없습니다.');
-      }
-    } catch (error: any) {
-      console.error(error.message);
+  const onClickFunc = () => {
+    if (text === '' || image === '') {
+      return alert('사진 설명 또는 이미지가 빈칸입니다');
     }
+    props.onClickCreateAlbum(text, image);
+    setText('');
+    setImage('');
   };
 
   return (
-    <Box>
-      <TitleBox>
-        <input type="text" placeholder="사진 설명" />
-      </TitleBox>
-      <ImgBox
-        onClick={() => {
-          inputRef.current?.click();
-        }}
-      >
-        {preview ? (
-          <Preview src={preview} />
-        ) : (
-          <>
-            <img
-              src="/icon/addIcon.png"
-              width={'70px'}
-              height={'70px'}
-            />
-            <p>이미지를 추가해주세요</p>
-          </>
-        )}
-      </ImgBox>
-      <input
-        type="file"
-        ref={inputRef}
-        style={{ display: 'none' }}
-        onChange={onChangeCreateImage}
-      />
-
-      <InnerBox>
-        <button>사진 추가</button>
-      </InnerBox>
-    </Box>
+    <InputContainerBox>
+      <AlbumTextComp setText={setText} text={text} />
+      <AlbumImageComp setImage={setImage} image={image} />
+      <button onClick={onClickFunc}>앨범에 저장</button>
+    </InputContainerBox>
   );
 };
 
-const Box = styled.div`
+const InputContainerBox = styled.div`
   border: 1px solid teal;
   text-align: center;
-`;
-const InnerBox = styled.div`
   padding: 20px;
   box-sizing: border-box;
-`;
-const TitleBox = styled.div`
-  padding: 20px;
-  box-sizing: border-box;
-  input {
-    width: 250px;
-    height: 40px;
-    border: none;
-    border-bottom: 1px solid teal;
-    outline: none;
-  }
-`;
-const ImgBox = styled.div`
-  padding: 20px;
-  box-sizing: border-box;
-  cursor: pointer;
-`;
-const Preview = styled.img`
-  width: 300px;
-  height: 300px;
-  border-radius: 4px;
-  object-fit: cover;
 `;
