@@ -1,5 +1,5 @@
 import React, { FC, ReactElement } from 'react';
-import { Album } from '../types/typeAlbum';
+import { Album } from '../../types';
 import { ViewBox } from './styles/s_ViewCotainer';
 
 type Props = {
