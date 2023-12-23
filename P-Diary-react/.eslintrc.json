@@ -1,14 +1,17 @@
 {
   "env": {
     "browser": true,
-    "es2021": true
+    "es2021": true,
+    "node": true,
+    "commonjs": true
   },
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
     "prettier",
-    "react-app"
+    "react-app",
+    "airbnb-base"
   ],
   "overrides": [],
   "parser": "@typescript-eslint/parser",
@@ -16,7 +19,12 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["react", "@typescript-eslint", "prettier"],
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "prettier",
+    "html"
+  ],
   "rules": {},
   "settings": {
     // ESlint 플러그인 설치 후 추가
