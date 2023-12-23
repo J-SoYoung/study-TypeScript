@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { FC, ReactElement } from 'react';
 import './App.css';
+import { Home } from './pages/Home';
 
-function App() {
-  return <h1>hello soyoung dev house</h1>;
-}
+const App: FC = (): ReactElement => {
+  return <Home />;
+};
 
 export default App;
