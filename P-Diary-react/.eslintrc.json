@@ -5,14 +5,7 @@
     "node": true,
     "commonjs": true
   },
-  "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended",
-    "prettier",
-    "react-app",
-    "airbnb-base"
-  ],
+
   "overrides": [],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -20,10 +13,17 @@
     "sourceType": "module"
   },
   "plugins": [
-    "react",
     "@typescript-eslint",
+    "react",
+    "prettier"
+  ],
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "eslint:recommended",
+    "plugin:react/recommended",
     "prettier",
-    "html"
+    "airbnb-base",
+    "react-app"
   ],
   "rules": {},
   "settings": {
