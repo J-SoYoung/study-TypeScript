@@ -8,12 +8,12 @@
 <br>
 
 # 01_한 입 크기로 잘라먹는 TypeScript
-[:memo: onebite-main][ onebite-main ] 
 <img src="https://github.com/thdud2262/study-typescript/assets/85012454/6b5f734e-bbf6-4892-b0ce-18e5c9e50ef4" width="280" title="Cover Image" align="left">
 <br><br><br><br><br><br><br><br><br>
 <br><br>
 
 ### 강의내용 및 노트
+### [:memo: onebite 메인 깃허브로 이동 ][ onebite-main ] 
 
 | 제목                          | 내용                                                                                            |
 | ----------------------------- | ----------------------------------------------------------------------------------------------- |
@@ -32,10 +32,11 @@
 <br>
 
 # 02_Effective TypeScript 
-[:memo: effective-main][ effective-main ]  
 
 <img src="https://github.com/thdud2262/study-typescript/assets/85012454/531b6998-533b-45b2-a52a-50881c6b4ed8" width="280" title="Cover Image" align="left">
 
+### [:memo: Effective 메인 깃허브로 이동][ effective-main ]  
+### [:memo: 노션 블로그로 이동하기 ][ notion ] 
 | 제목                          | 내용                                                             |
 | ----------------------------- | ---------------------------------------------------------------- |
 | [:memo: chapter01][chapter01] | 타입스크립트 소개                                                 |                       
@@ -51,9 +52,9 @@
 <br>
 <br>
 
-# 03_TypeScript-programming 
-<img src="./__image/typescript-programming.png" width="280" title="Cover Image" align="left">
 
+<!-- notion -->
+[notion]: https://www.notion.so/fun-blog/BOOK-STUDY-Effective-TypeScript-5a496e6b89e946f8b41f0e049a4bdde8 
 
 <!-- 한입 TypeScript -->
 [onebite-main]: /L-onebite-TypeScript
