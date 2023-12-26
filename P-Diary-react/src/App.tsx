@@ -6,14 +6,14 @@ import {
   Route,
   Routes,
 } from 'react-router-dom';
-import { NewPage } from './pages/NewPage';
+import { DetailPage } from './pages/DetailPage';
 
 const App: FC = (): ReactElement => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/new" element={<NewPage />} />
+        <Route path="/detail" element={<DetailPage />} />
       </Routes>
     </BrowserRouter>
   );
