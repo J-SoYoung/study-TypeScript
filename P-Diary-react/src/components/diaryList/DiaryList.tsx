@@ -1,21 +1,24 @@
-import React, { FC, ReactElement } from 'react';
+import React, { FC, ReactElement, useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { DiaryType } from '../editor/types';
 import styled from 'styled-components';
+import { DiaryStateContext } from '../../App';
 
-type Props = {
-  diaryList: DiaryType[];
-};
-export const DiaryList: FC<Props> = (
-  props,
-): ReactElement => {
-  const { diaryList = [] } = props;
+export const DiaryList: FC = (): ReactElement => {
+  const navigate = useNavigate();
+  const { diaryList } = useContext<{
+    diaryList: DiaryType[];
+    setDiaryList: React.Dispatch<
+      React.SetStateAction<DiaryType[]>
+    >;
+  }>(DiaryStateContext);
 
   return (
     <>
       {diaryList.map((diary) => {
-        console.log(diary);
         return (
           <DiaryBox
+            onClick={() => navigate(`/detail/${diary.id}`)}
             key={diary.id}
             $emotionColor={diary?.emotion.color}
           >
@@ -37,15 +40,19 @@ export const DiaryList: FC<Props> = (
 };
 
 const DiaryBox = styled.div<{ $emotionColor: string }>`
-  border: 1px solid lightgray;
+  width: 100%;
+  max-height: 120px;
   margin: 16px 0;
   display: flex;
+  aling-itmes: center;
   justify-content: flex-start;
   border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid lightgray;
 
   .img_container {
     width: 100px;
-    height: 100px;
+    height: 120px !important;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,7 +63,6 @@ const DiaryBox = styled.div<{ $emotionColor: string }>`
       height: 70px;
     }
   }
-
   .text_container {
     padding: 16px;
     box-sizing: border-box;
