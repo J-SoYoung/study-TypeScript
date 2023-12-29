@@ -1,10 +1,15 @@
 import React, {
   FC,
   ReactElement,
+  useContext,
   useRef,
   useState,
 } from 'react';
-import { ButtonBox, DiaryContainer, Title } from './styles';
+import {
+  ButtonBox,
+  EditorContainer,
+  Title,
+} from './styles';
 import {
   ClickedPropsType,
   DiaryType,
@@ -13,16 +18,24 @@ import {
 import { InputComp } from './_InputComp';
 import { TextareaComp } from './_TextareaComp';
 import { EmotionComp } from './_EmotionComp';
+import { DiaryStateContext } from '../../App';
 
-type Props = {
-  diaryList: DiaryType[];
-  setDiaryList: React.Dispatch<
-    React.SetStateAction<DiaryType[]>
-  >;
-};
+// type Props = {
+//   setDiaryList: React.Dispatch<React.SetStateAction<DiaryType[]>>;
+// };
 
-export const Editor: FC<Props> = (props): ReactElement => {
-  const { setDiaryList } = props;
+export const Editor: FC = (): ReactElement => {
+  const { setDiaryList } = useContext<{
+    diaryList: DiaryType[];
+    setDiaryList: React.Dispatch<
+      React.SetStateAction<DiaryType[]>
+    >;
+  }>(DiaryStateContext);
+
+  // const diaryList = useContext<DiaryType[]>(
+  //   DiaryStateContext,
+  // );
+
   const diaryId = useRef(0);
 
   const [title, setTitle] = useState<string>('');
@@ -66,7 +79,7 @@ export const Editor: FC<Props> = (props): ReactElement => {
   };
 
   return (
-    <DiaryContainer>
+    <EditorContainer>
       <Title>Write a Diary</Title>
       <InputComp
         title={title}
@@ -93,6 +106,6 @@ export const Editor: FC<Props> = (props): ReactElement => {
           일기 작성
         </button>
       </ButtonBox>
-    </DiaryContainer>
+    </EditorContainer>
   );
 };
