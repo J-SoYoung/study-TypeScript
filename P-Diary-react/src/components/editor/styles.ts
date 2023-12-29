@@ -5,8 +5,7 @@ export const Title = styled.h1`
   font-weight: 700;
   margin-bottom: 16px;
 `;
-export const DiaryContainer = styled.div`
-  border: 1px solid lightgray;
+export const EditorContainer = styled.div`
   width: 100%;
   padding: 20px;
   box-sizing: border-box;
@@ -14,6 +13,7 @@ export const DiaryContainer = styled.div`
   flex-direction: column;
   justify-contents: center;
   align-items: flex-start;
+  border: 1px solid lightgray;
   border-radius: 8px;
 `;
 export const InputBox = styled.div`

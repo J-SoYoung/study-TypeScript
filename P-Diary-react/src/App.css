@@ -16,3 +16,8 @@ p {
   font: inherit;
   vertical-align: baseline;
 }
+.App {
+  max-width: 450px;
+  padding: 16px;
+  box-sizing: border-box;
+}
