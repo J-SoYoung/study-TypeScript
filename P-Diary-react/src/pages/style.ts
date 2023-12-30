@@ -11,6 +11,18 @@ export const DetailBox = styled.div`
   align-items: flex-start;
   border-radius: 8px;
   border: 1px solid lightgray;
+  .go_main_button {
+    height: 30px;
+    margin-bottom: 10px;
+    border: none;
+    font-size: 20px;
+    background-color: white;
+    cursor: pointer;
+  }
+  .go_main_button:hover {
+    background-color: #eee;
+    border-radius: 4px;
+  }
 `;
 
 export const ImageDiv = styled.div<{
@@ -66,9 +78,14 @@ export const ButtonDiv = styled.div<{
     cursor: pointer;
     border: none;
     border-radius: 4px;
+    font-weight: 700;
   }
   .edit_button:hover {
     background-color: ${(props) => props.$emotionColor};
+    color: white;
+  }
+  .delete_button:hover {
+    background-color: darkgray;
     color: white;
   }
 `;

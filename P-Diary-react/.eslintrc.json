@@ -18,7 +18,8 @@
   "plugins": ["react", "@typescript-eslint", "prettier"],
   "rules": {
     "prettier/prettier": ["error", { "endOfLine": "auto" }],
-    "no-unused-vars": "off"
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-explicit-any": "off"
   },
   "settings": {
     // ESlint 플러그인 설치 후 추가

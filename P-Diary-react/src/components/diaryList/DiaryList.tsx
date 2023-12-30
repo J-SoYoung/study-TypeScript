@@ -20,18 +20,21 @@ export const DiaryList: FC = (): ReactElement => {
           <DiaryBox
             onClick={() => navigate(`/detail/${diary.id}`)}
             key={diary.id}
-            $emotionColor={diary?.emotion.color}
           >
-            <div className="img_container">
+            <ImageDiv
+              className="img_container"
+              $emotionColor={diary?.emotion.color}
+            >
               <img src={`/assets/${diary.emotion.src}`} />
-            </div>
-            <div className="text_container">
+            </ImageDiv>
+
+            <ContentsDiv className="text_container">
               <p>
                 {diary.date.toISOString().split('T')[0]}
               </p>
               <p>{diary.title}</p>
               <p>{diary.contents}</p>
-            </div>
+            </ContentsDiv>
           </DiaryBox>
         );
       })}
@@ -39,7 +42,7 @@ export const DiaryList: FC = (): ReactElement => {
   );
 };
 
-const DiaryBox = styled.div<{ $emotionColor: string }>`
+const DiaryBox = styled.div`
   width: 100%;
   max-height: 120px;
   margin: 16px 0;
@@ -49,22 +52,22 @@ const DiaryBox = styled.div<{ $emotionColor: string }>`
   border-radius: 8px;
   cursor: pointer;
   border: 1px solid lightgray;
-
-  .img_container {
-    width: 100px;
-    height: 120px !important;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: ${(props) => props.$emotionColor};
-    border-radius: 8px;
-    img {
-      width: 70px;
-      height: 70px;
-    }
+`;
+const ImageDiv = styled.div<{ $emotionColor: string }>`
+  width: 100px;
+  height: 120px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: ${(props) => props.$emotionColor};
+  border-radius: 8px;
+  img {
+    width: 70px;
+    height: 70px;
   }
-  .text_container {
-    padding: 16px;
-    box-sizing: border-box;
-  }
+`;
+const ContentsDiv = styled.div`
+  width: 100%;
+  height: 100%;
+  padding: 16px;
 `;

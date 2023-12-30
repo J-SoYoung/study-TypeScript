@@ -9,6 +9,7 @@ import {
 import { DetailPage } from './pages/DetailPage';
 import { DiaryType } from './components/editor/types';
 
+//////////////////// ContextAPI
 export const DiaryStateContext = React.createContext<{
   diaryList: DiaryType[];
   setDiaryList: React.Dispatch<
@@ -19,6 +20,7 @@ export const DiaryStateContext = React.createContext<{
   setDiaryList: () => {},
 });
 
+////////////////////APP 컴포넌트 시작
 const App: FC = (): ReactElement => {
   const [diaryList, setDiaryList] = useState<DiaryType[]>(
     [],
@@ -34,7 +36,7 @@ const App: FC = (): ReactElement => {
             <Route path="/" element={<Home />} />
             <Route
               path="/detail/:id"
-              element={<DetailPage diaryList={diaryList} />}
+              element={<DetailPage />}
             />
           </Routes>
         </BrowserRouter>
